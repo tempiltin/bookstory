@@ -1,0 +1,22 @@
+<div class="container">
+    <form action="/books/update" method="POST">
+        <div class="input-field col s6">
+            <input id="bookName" type="text" class="validate" name="title" required value="{{title}}">
+            <label for="bookName">Book name</label>
+        </div>
+
+        <div class="input-field col s6">
+            <input id="bookPrice" type="number" class="validate" name="price" required min="5" value="{{price}}">
+            <label for="bookPrice">Book price</label>
+        </div>
+
+        <div class="input-field col s6">
+            <input id="bookImg" type="text" class="validate" name="img" required value="{{img}}">
+            <label for="bookImg">Book img</label>
+        </div>
+
+        <input type="hidden" name="id" value="{{id}}">
+
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+</div>

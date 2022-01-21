@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row" style="justify-content: center;">
+        <div class="col s8 " style="margin-left: unset;">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{img}}">
+                    <span class="card-title">{{title}}</span>
+                </div>
+                <div class="card-content">
+                    <p>{{price}}</p>
+                </div>
+                <div class="card-action">
+                    <form action="/books/delete" method="POST">
+                        <button class="btn" type="submit">Delete</button>
+                        <input type="hidden" value="{{id}}" name="id">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

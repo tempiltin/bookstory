@@ -1,0 +1,20 @@
+<div class="container">
+    <form action="/books/add/book" method="POST">
+        <div class="input-field col s6">
+            <input id="bookName" type="text" class="validate" name="title" required>
+            <label for="bookName">Book name</label>
+        </div>
+
+        <div class="input-field col s6">
+            <input id="bookPrice" type="number" class="validate" name="price" required min="5">
+            <label for="bookPrice">Book price</label>
+        </div>
+
+        <div class="input-field col s6">
+            <input id="bookImg" type="text" class="validate" name="img" required>
+            <label for="bookImg">Book img</label>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Create</button>
+    </form>
+</div>

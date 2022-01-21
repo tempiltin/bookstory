@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row mt-1">
+        <div class="col-3">
+            <div class="container">
+                <div class="row " style="text-align: center; justify-content: center;">
+                    <a class="waves-effect waves-light btn" href="/books/add/book">Create book <span>+</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-9 scrolll">
+            <div class="container">
+                <div class="row">
+                    {{#each books}}
+                    <div class="col-lg-4 col-12">
+                        <div style="margin-left: unset;">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="{{img}}">
+                                    <span class="card-title">{{title}}</span>
+                                </div>
+                                <div class="card-content">
+                                    <p class="price">{{price}}</p>
+                                </div>
+                                <div class="card-action" style="display: flex; justify-content: center;">
+                                    <a href="/books/view/{{id}}">View the book</a>
+                                    <a href="/books/update/{{id}}">Update book</a>
+
+                                    <form action="/card/buy" method="POST">
+                                        <input type="hidden" name="id" value="{{id}}">
+                                        <button class="btn btn-primary">Buy</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
